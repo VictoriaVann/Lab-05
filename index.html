@@ -7,47 +7,27 @@
 <body>
   <h1>Volunteer Form</h1>
   <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
-    <legend>My Info</legend>
-    <div><label>first name: <input size="100" type=:text" name="first_name_field"</label></div>
-    <div><label>last name: <input size="100" type="text" name="last_name_field"></label></div>
-    <div><label>phone: <input size="100" type="text" name="phone_field"></label></div>
-    <div><label>email: <input size="100" type="text" name="email_field"></label></div>
-    <div>Gender: </div>
+    <fieldset>
+      <legend>My Info</legend>
+      <div><label>first name: <input size="100" type=:text" name="first_name_field"</label></div>
+      <div><label>last name: <input size="100" type="text" name="last_name_field"></label></div>
+      <div><label>phone: <input size="100" type="text" name="phone_field"></label></div>
+      <div><label>email: <input size="100" type="text" name="email_field"></label></div>
+      <div>Gender: </div>
+      <div>
+        <label>Male <input type="radio" name="gender_field" value="male"></label>
+        <label>Female <input type="radio" name="gender_field" value="female"></label>
+      </div>
+      <div>Age: </div>
+      <select name="age_field">
+        <option>under 18</option>
+        <option>over 18</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>My Availability</legend>
+    </fieldset>
 
     
-    <div style="text-align:center;">
-    <h2>Lab Form Processing Script</h2>
-    <p>This page will display the results of the form that was submitted to it.</p>
-  </div>
-  <hr><br>
-  <h1>Thank you for your Lab form submission, <?php echo htmlentities($firstName) ?>!</h1>
-  <div class="box">
-  <h2>This section contains the information provided in the my info section:</h2>
-    <p><strong>First Name:</strong> <?php echo htmlentities($firstName) ?></p>
-    <p><strong>Last Name:</strong> <?php echo htmlentities($lastName) ?></p>
-    <p><strong>Phone Number:</strong> <?php echo htmlentities($phone) ?></p>
-    <p><strong>Email Address:</strong> <?php echo htmlentities($email) ?></p>
-    <p><strong>Gender:</strong> <?php echo htmlentities($gender) ?></p>
-    <p><strong>Age:</strong> <?php echo htmlentities($age) ?></p>
-  </div>
-  <div class="box">
-  <h2>This section contains the information provided in the availibility section:</h2>
-  <h3>Days Selected as Available:</h3>
-  <?php
-    if (is_array($available)){
-      foreach ($available as $ckvalue) {
-        echo ('<p>' . htmlentities($ckvalue) . '</p>');
-      }
-    } else {
-      echo ('<p>' . htmlentities($available) . '</p>');
-    }
-  ?>
-  <h3>Comments:</h3>
-  <p><?php echo nl2br(htmlentities($comments)) ?></p>
-  </div>
-  <div class="box">
-  <h2>This section contains the hidden information:</h2>
-    <p><strong>HTML Form created by:</strong> <?php echo htmlentities($hidden) ?></p>
-  </div>
 </body>
 </html>
