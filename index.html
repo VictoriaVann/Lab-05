@@ -1,33 +1,21 @@
-<?php
-
-//Make short Variable names
-$firstName = $_REQUEST['first_name_field'];
-$lastName = $_REQUEST['last_name_field'];
-$phone = $_REQUEST['phone_field'];
-$email = $_REQUEST['email_field'];
-$hidden = $_REQUEST['hidden_field'];
-$comments = $_REQUEST['comments_field'];
-$gender = $_REQUEST['gender_field'];
-$available = $_REQUEST['available_field'];
-$age = $_REQUEST['age_field'];
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Lab Form Processing Script</title>
-    <style>
-    .box {
-      border: 1px solid #444;
-      background-color: #ccc;
-      margin: 20px 20px;
-      padding: 5px 20px;
-    }
-  </style>
+  <title>Lab 05</title>
 </head>
 <body>
-  <div style="text-align:center;">
+  <h1>Volunteer Form</h1>
+  <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+    <legend>My Info</legend>
+    <div><label>first name: <input size="100" type=:text" name="first_name_field"</label></div>
+    <div><label>last name: <input size="100" type="text" name="last_name_field"></label></div>
+    <div><label>phone: <input size="100" type="text" name="phone_field"></label></div>
+    <div><label>email: <input size="100" type="text" name="email_field"></label></div>
+    <div>Gender: </div>
+
+    
+    <div style="text-align:center;">
     <h2>Lab Form Processing Script</h2>
     <p>This page will display the results of the form that was submitted to it.</p>
   </div>
